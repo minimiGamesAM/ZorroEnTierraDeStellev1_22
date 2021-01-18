@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 4c6d72a7ad7bcab4f9b0423e53cf7d68, type: 3}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.623309, g: 0.8207547, b: 0.797665, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3417,10 +3417,10 @@ Transform:
   - {fileID: 1809881198}
   - {fileID: 1200030893}
   - {fileID: 1619196496}
-  - {fileID: 671547792}
-  - {fileID: 1779475195}
   - {fileID: 763110118}
+  - {fileID: 671547792}
   - {fileID: 636115795}
+  - {fileID: 1779475195}
   - {fileID: 1961436588}
   - {fileID: 97161929}
   - {fileID: 1099697948}
