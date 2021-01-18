@@ -16,6 +16,7 @@ public class EnemyFollowState : EnemyBaseState
     public override void Update(EnemyFSM enemy)
     {
         enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, _playerPos.position, _speed * Time.deltaTime);
+        enemy.rotate(_playerPos.position);
 
         if (Vector2.Distance(enemy.transform.position, _playerPos.position) > 6.0f)
         {

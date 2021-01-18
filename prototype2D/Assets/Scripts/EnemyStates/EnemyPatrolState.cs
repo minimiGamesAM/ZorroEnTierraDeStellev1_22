@@ -23,6 +23,8 @@ public class EnemyPatrolState : EnemyBaseState
 
     public override void Update(EnemyFSM enemy)
     {
+        enemy.rotate(enemy.PatrolPoint + _randomPoint);
+
         if(Vector2.Distance(enemy.PatrolPoint + _randomPoint, enemy.transform.position) > 0.2f)
         {
             enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, enemy.PatrolPoint + _randomPoint, _speed * Time.deltaTime);

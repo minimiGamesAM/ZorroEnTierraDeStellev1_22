@@ -23,6 +23,12 @@ public class EnemyFSM : MonoBehaviour
         _currentState.EnterState(this);
     }
 
+    public void rotate(Vector3 targetToLookAt)
+    {
+        Quaternion desiredQuaternion = Quaternion.LookRotation(transform.forward, targetToLookAt - transform.position);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredQuaternion, 1000 * Time.deltaTime);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
