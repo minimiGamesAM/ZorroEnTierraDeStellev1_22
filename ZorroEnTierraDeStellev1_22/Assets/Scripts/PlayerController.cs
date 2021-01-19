@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float playerSpeed = 10;
+    public float barkDistance = 2;
 
     private Vector3 moveVelocityDir;
     private Rigidbody2D rb;
@@ -31,12 +32,31 @@ public class PlayerController : MonoBehaviour
         {
             Quaternion desiredQuaternion = Quaternion.LookRotation(transform.forward, moveVelocityDir);
             rb.SetRotation(Quaternion.RotateTowards(rb.transform.rotation, desiredQuaternion, 1000 * Time.fixedDeltaTime));
-        } 
+        }
+    }
+
+    void bark()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Ray2D ray = new Ray2D(transform.position + transform.up * transform.localScale.y, transform.up);
+            Debug.DrawRay(ray.origin, ray.direction * barkDistance, Color.red, 0.1f);
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up * transform.localScale.y, transform.up, barkDistance);
+            if (hit)
+            {
+               if (hit.collider.gameObject.tag == "enemy")
+               {
+                   print("There is an enemy ahead");
+               } 
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         MovePlayer();
+        bark();
     }
 }

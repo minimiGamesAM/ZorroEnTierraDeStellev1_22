@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
+  barkDistance: 2
 --- !u!70 &13594806
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5123,6 +5124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304665036036846739, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8304665036036846741, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
         type: 3}
@@ -10555,6 +10561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8304665036036846739, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8304665036036846741, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
         type: 3}
       propertyPath: m_RootOrder
@@ -11813,6 +11824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304665036036846739, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8304665036036846741, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
         type: 3}
@@ -13759,6 +13775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304665036036846739, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8304665036036846741, guid: bbc4b5ae8810e8d41ba7e2fffc5c52b1,
         type: 3}
