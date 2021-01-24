@@ -39,4 +39,9 @@ public class EnemyPatrolState : EnemyBaseState
             enemy.TransitionToState(enemy._EnemyFollowState);
         }
     }
+
+    public override void EnemyPushedBack(EnemyFSM enemy)
+    {
+
+    }
 }
