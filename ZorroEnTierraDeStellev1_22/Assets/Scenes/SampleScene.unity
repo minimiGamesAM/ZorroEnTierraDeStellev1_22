@@ -6685,7 +6685,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 20}
   m_EdgeRadius: 0
 --- !u!95 &303597740
 Animator:
@@ -17105,7 +17105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 20}
   m_EdgeRadius: 0
 --- !u!1001 &797924285
 PrefabInstance:
@@ -25764,7 +25764,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 20}
   m_EdgeRadius: 0
 --- !u!1001 &1186511776
 PrefabInstance:
@@ -27457,7 +27457,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 20}
   m_EdgeRadius: 0
 --- !u!1001 &1263918924
 PrefabInstance:
@@ -36578,7 +36578,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 20}
   m_EdgeRadius: 0
 --- !u!1001 &1657835720
 PrefabInstance:
