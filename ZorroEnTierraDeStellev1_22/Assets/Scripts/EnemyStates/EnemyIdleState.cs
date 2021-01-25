@@ -17,4 +17,9 @@ public class EnemyIdleState : EnemyBaseState
             enemy.TransitionToState(enemy._EnemyFollowState);
        }
     }
+
+    public override void EnemyPushedBack(EnemyFSM enemy)
+    {
+
+    }
 }

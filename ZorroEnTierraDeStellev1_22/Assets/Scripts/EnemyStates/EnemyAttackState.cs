@@ -14,4 +14,9 @@ public class EnemyAttackState : EnemyBaseState
     {
        
     }
+
+    public override void EnemyPushedBack(EnemyFSM enemy)
+    {
+
+    }
 }

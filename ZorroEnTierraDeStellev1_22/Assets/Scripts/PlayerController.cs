@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action<Collider2D> EnemyPushBack;
     public float playerSpeed = 10;
     public float barkDistance = 2;
 
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void bark()
+    private void bark()
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -45,10 +47,15 @@ public class PlayerController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up * transform.localScale.y, transform.up, barkDistance);
             if (hit)
             {
-               if (hit.collider.gameObject.tag == "enemy")
-               {
-                   print("There is an enemy ahead");
-               } 
+                if (hit.collider.gameObject.tag == "enemy")
+                {
+                    print("There is an enemy ahead");
+
+                    if (EnemyPushBack != null)
+                    {
+                        EnemyPushBack(hit.collider);
+                    }
+                } 
             }
         }
     }

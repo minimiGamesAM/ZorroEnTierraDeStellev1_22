@@ -8,9 +8,12 @@ public class EnemyFSM : MonoBehaviour
     public readonly EnemyAttackState _EnemyAttackState = new EnemyAttackState();
     public readonly EnemyPatrolState _EnemyPatrolState = new EnemyPatrolState();
     public readonly EnemyFollowState _EnemyFollowState = new EnemyFollowState();
+    public readonly EnemyBackUpState _EnemyBackUpdState = new EnemyBackUpState();
 
     private EnemyBaseState _currentState;
     private Vector2 _patrolPoint;
+
+    PlayerController _player;
 
     public Vector2 PatrolPoint
     {
@@ -29,11 +32,24 @@ public class EnemyFSM : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredQuaternion, 1000 * Time.deltaTime);
     }
 
+    void EnemyPushedBack(Collider2D collider)
+    {
+        if (collider.gameObject.name == this.name)
+        {
+            _currentState.EnemyPushedBack(this);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         _patrolPoint = transform.position; 
         TransitionToState(_EnemyPatrolState);
+
+        //_player = GameObject.Find("Player");
+        _player = FindObjectOfType<PlayerController>();
+
+        _player.EnemyPushBack += EnemyPushedBack;
     }
 
     // Update is called once per frame
